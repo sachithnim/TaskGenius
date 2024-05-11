@@ -17,7 +17,7 @@
         android:layout_marginTop="18dp"
         android:text="Add Task."
         android:textColor="@color/Green"
-        android:textSize="24sp"
+        android:textSize="26sp"
         android:fontFamily="@font/poppins_semibold"/>
 
     <ImageView
@@ -44,6 +44,7 @@
         android:textSize="20sp" />
     
     <EditText
+        android:id="@+id/contentEdit"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="Enter the description..."
