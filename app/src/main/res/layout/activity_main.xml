@@ -7,6 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tasksHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Tasks"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/Green"
+        android:textSize="26sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:padding="18dp"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
