@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var db: TasksDatabaseHelper
-    private lateinit var tasksAdapter: TaskAdapter
+    private lateinit var tasksAdapter: TasksAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         db = TasksDatabaseHelper(this)
-        tasksAdapter = TaskAdapter(db.getAllTasks(), this)
+        tasksAdapter = TasksAdapter(db.getAllTasks(), this)
 
         binding.taskRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.taskRecyclerView.adapter = tasksAdapter

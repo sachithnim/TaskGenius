@@ -7,34 +7,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="18dp"
-    tools:context=".AddTaskActivity">
+    tools:context=".UpdateTaskActivity">
 
     <TextView
-        android:id="@+id/addTaskHeading"
+        android:id="@+id/editTaskHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="18dp"
-        android:text="@string/add_task"
+        android:text="@string/edit_task"
         android:textColor="@color/Green"
         android:textSize="26sp"
         android:fontFamily="@font/poppins_semibold"/>
 
     <ImageView
-        android:id="@+id/saveBtn"
+        android:id="@+id/updateSaveBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_done"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/addTaskHeading"
+        android:layout_alignTop="@+id/editTaskHeading"
         android:layout_marginEnd="6dp"
         android:layout_marginTop="8dp"/>
 
     <EditText
-        android:id="@+id/titleEdit"
+        android:id="@+id/updateTitleEdit"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@+id/addTaskHeading"
+        android:layout_below="@+id/editTaskHeading"
         android:layout_marginTop="16dp"
         android:background="@drawable/green_border"
         android:fontFamily="@font/poppins"
@@ -42,9 +42,9 @@
         android:maxLines="1"
         android:padding="12dp"
         android:textSize="20sp" />
-    
+
     <EditText
-        android:id="@+id/contentEdit"
+        android:id="@+id/updateContentEdit"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="@string/enter_the_description"
@@ -52,7 +52,7 @@
         android:padding="12dp"
         android:textSize="20sp"
         android:background="@drawable/green_border"
-        android:layout_below="@+id/titleEdit"
+        android:layout_below="@+id/updateTitleEdit"
         android:layout_marginTop="14dp"
         android:fontFamily="@font/poppins"/>
 
