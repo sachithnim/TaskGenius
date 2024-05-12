@@ -49,8 +49,8 @@ class TasksDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE
             val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
             val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE))
             val content = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CONTENT))
-
             val task = Task(id, title, content)
+
             taskList.add(task)
         }
 
@@ -64,6 +64,7 @@ class TasksDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE
         val values = ContentValues().apply {
             put(COLUMN_TITLE, task.title)
             put(COLUMN_CONTENT, task.content)
+
         }
         val whereClause = "$COLUMN_ID = ?"
         val whereArgs = arrayOf(task.id.toString())
@@ -81,6 +82,8 @@ class TasksDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE
         val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
         val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE))
         val content = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CONTENT))
+
+
 
         cursor.close()
         db.close()

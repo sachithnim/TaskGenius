@@ -5,44 +5,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/hello"
+        android:textColor="@color/Green"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tasksHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="18dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/tasks"
-        android:layout_marginStart="20dp"
         android:textColor="@color/Green"
-        android:textSize="26sp" />
+        android:textSize="28sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/calender"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center"
+            android:background="@drawable/baseline_calendar"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:id="@+id/noImage"
+                android:src="@drawable/note"
+                android:layout_gravity="center"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:padding="18dp"/>
+        android:layout_marginTop="90dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:clickable="true"
-        android:focusable="true"
-        android:tint="@color/white"
-        android:backgroundTint="@color/Green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/baseline_add"
-        android:importantForAccessibility="no" />
+        </FrameLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/Green"
+            android:clickable="true"
+            android:focusable="true"
+            android:importantForAccessibility="no"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/baseline_add" />
+
+    </LinearLayout>
 
 </RelativeLayout>

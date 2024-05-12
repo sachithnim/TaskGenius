@@ -23,12 +23,21 @@ class AddTaskActivity : AppCompatActivity() {
         binding.saveBtn.setOnClickListener {
             val title = binding.titleEdit.text.toString()
             val content = binding.contentEdit.text.toString()
-            val task = Task(id = 0, title = title, content = content)
+//            val date = binding.dateEdit.text.toString()
+//            val time = binding.timeEdit.text.toString()
+//            val event = binding.eventEdit.text.toString()
 
-            db.insertTask(task)
-            finish()
+            if (title.isNotEmpty() && content.isNotEmpty()) {
+//                val task = Task(0, title, content, date, time, event)
+                val task = Task(0, title, content)
+                db.insertTask(task)
 
-            Toast.makeText(this, "Task Saved", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Task Saved", Toast.LENGTH_SHORT).show()
+
+                finish()
+            } else {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

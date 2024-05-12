@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">TaskGenius</string>
-    <string name="tasks">Tasks</string>
+    <string name="tasks">All Tasks</string>
     <string name="content">Content</string>
     <string name="title">Title</string>
     <string name="add_task">Add Task.</string>
     <string name="enter_the_title">Enter the title</string>
-    <string name="enter_the_description">Enter the description...</string>
+    <string name="enter_the_description">Enter the description…</string>
     <string name="edit_task">Edit Task</string>
+    <string name="hello">Hello</string>
+    <string name="add_task_b">Add task</string>
+    <string name="update">Update</string>
+    <string name="date">Date</string>
+    <string name="task_mastery_unleash_your_potential">Task Mastery Unleash Your Potential</string>
+    <string name="completed">Completed</string>
+
 </resources>

@@ -33,6 +33,7 @@ class UpdateTaskActivity : AppCompatActivity() {
         binding.updateSaveBtn.setOnClickListener {
             val newTitle = binding.updateTitleEdit.text.toString()
             val newContent = binding.updateContentEdit.text.toString()
+
             val updatedTask = Task(taskId, newTitle, newContent)
 
             db.updateTask(updatedTask)

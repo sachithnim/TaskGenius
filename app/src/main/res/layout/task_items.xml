@@ -2,11 +2,13 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true"
+    tools:ignore="ExtraText">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +31,7 @@
                 android:textColor="@color/Green"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-            
+
             <ImageView
                 android:id="@+id/updateBtn"
                 android:layout_width="24dp"
@@ -56,8 +58,18 @@
             android:maxLines="3"
             android:layout_marginTop="5dp" />
 
-    </LinearLayout>
 
+        <CheckBox
+            android:id="@+id/taskCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/completed"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="5dp" />
+
+
+    </LinearLayout>
++
 
 
 </androidx.cardview.widget.CardView>

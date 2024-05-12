@@ -17,8 +17,9 @@
         android:layout_marginTop="18dp"
         android:text="@string/add_task"
         android:textColor="@color/Green"
-        android:textSize="26sp"
+        android:textSize="24sp"
         android:fontFamily="@font/poppins_semibold"/>
+
 
     <ImageView
         android:id="@+id/saveBtn"
@@ -29,6 +30,7 @@
         android:layout_alignTop="@+id/addTaskHeading"
         android:layout_marginEnd="6dp"
         android:layout_marginTop="8dp"/>
+
 
     <EditText
         android:id="@+id/titleEdit"
@@ -42,11 +44,11 @@
         android:maxLines="1"
         android:padding="12dp"
         android:textSize="20sp" />
-    
+
     <EditText
         android:id="@+id/contentEdit"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="60dp"
         android:hint="@string/enter_the_description"
         android:gravity="top"
         android:padding="12dp"
@@ -55,5 +57,10 @@
         android:layout_below="@+id/titleEdit"
         android:layout_marginTop="14dp"
         android:fontFamily="@font/poppins"/>
+
+
+
+
+
 
 </RelativeLayout>
